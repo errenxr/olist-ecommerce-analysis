@@ -914,20 +914,6 @@ def tab_delivery(dv, valid, rv):
             Selisih rata-rata skor: <b>{fmt_num(avg_on - avg_late)}</b> poin.</div></div>
             <div class="step"><div class="step-n blue">2</div><div class="step-b"><b>Tekan durasi pengiriman yang sangat panjang</b><br>
             {_long_duration_text(dur, avg_hm, n_hm)}</div></div>""")
-    with p2:
-        with card():
-            stronger = "keterlambatan" if abs(rho_delay) >= abs(rho_dur) else "durasi pengiriman"
-            html(f"""
-            <div class="ct">Kekuatan hubungan (korelasi peringkat Spearman)</div>
-            <div class="cs">Semakin negatif, semakin kuat hubungan “makin lambat → makin rendah skor”.</div>
-            <div class="hero-stat" style="border-color:#E5E7EB"><span>Keterlambatan vs skor ulasan</span><b>ρ = {fmt_num(rho_delay, 3)}</b></div>
-            <div class="hero-stat" style="border-color:#E5E7EB"><span>Durasi pengiriman vs skor ulasan</span><b>ρ = {fmt_num(rho_dur, 3)}</b></div>""")
-            callout("info", "Bacaan",
-                    f"Secara korelasi peringkat, hubungan dengan <b>{stronger}</b> tampak lebih kuat. Namun "
-                    f"efek keterlambatan bersifat <i>ambang</i>: pesanan yang datang lebih awal dari estimasi "
-                    f"hampir tidak memengaruhi skor, sehingga korelasi linear/peringkat cenderung meremehkannya. "
-                    f"Peta panas di atas (durasi × ketepatan) memberi gambaran yang lebih adil. "
-                    f"Korelasi menunjukkan keterkaitan, bukan sebab-akibat.")
     return
 
 
