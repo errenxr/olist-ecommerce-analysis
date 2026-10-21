@@ -1,0 +1,11 @@
+# Tema dasar mengikuti CreateSpace Design System (createspace-DESIGN.md)
+[theme]
+base = "light"
+primaryColor = "#E11D48"            # Color Primary
+backgroundColor = "#FFFFFF"         # Surface Base
+secondaryBackgroundColor = "#F3F4F6"
+textColor = "#1F2937"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false

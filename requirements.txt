@@ -1,0 +1,9 @@
+# Library yang digunakan pada proses analisis data (notebook)
+numpy>=1.26
+pandas>=2.0
+matplotlib>=3.8
+seaborn>=0.13
+
+# Library tambahan untuk dashboard interaktif
+streamlit>=1.40
+plotly>=5.20
